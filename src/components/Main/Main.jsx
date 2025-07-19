@@ -7,9 +7,12 @@ function Main({langue}) {
 	const {t} = useTranslation(langue);
 
 	return (
-		<div>
-			<p className="text-start">{t('main.nom')}</p>
-		</div>
+	  <div className="main-container">
+	    <div className="main-content">
+	      <p className="text-center main-title dm-sans-p">{t('main.name')}</p>
+	      <p className="text-center main-description dm-sans-p">{t('main.description')}</p>
+	    </div>
+	  </div>
 	);
 }
 

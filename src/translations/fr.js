@@ -8,8 +8,8 @@ const frTranslations = {
 
   // Textes de la page d'accueil
   main: {
-   nom: "Mohamed-Mazen Chaabane",
-      description: "Étudiant en informatique, passionné par le développement web et mobile.",
+      name: "Mohamed-Mazen Chaabane",
+      description: "Étudiant en informatique.",
   },
 
   // Textes pour d'autres pages (exemples)

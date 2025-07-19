@@ -1,11 +1,9 @@
 import React from 'react';
 import { useTheme } from '../../App';
-import { useTranslation } from '../../translations';
 import './Header.css';
 
 function Header({ langue, changerLangue }) {
     const { isDarkMode, toggleTheme } = useTheme();
-    const { t } = useTranslation(langue);
 
     // Fonction pour gérer le clic sur le thème avec vérification
     const handleThemeToggle = () => {
@@ -29,22 +27,22 @@ function Header({ langue, changerLangue }) {
         <div className='header-container'>
             {/* Dark Mode Toggle Button */}
             <button
-                className='btn btn-outline-secondary rounded theme-toggle'
+                className='theme-toggle'
                 onClick={handleThemeToggle}
                 aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
                 type="button"
             >
-                <i className={`bi ${isDarkMode ? 'bi-sun' : 'bi-moon'} me-1`}></i>
+                <i className={`bi ${isDarkMode ? 'bi-sun' : 'bi-moon'}`}></i>
             </button>
 
             {/* Language Toggle Button */}
             <button
-                className='btn btn-outline-secondary rounded language-toggle'
+                className='language-toggle'
                 onClick={handleLanguageToggle}
                 aria-label={`Switch to ${langue === "fr" ? "English" : "French"}`}
                 type="button"
             >
-                <i className='bi bi-translate me-1'></i>
+                <i className='bi bi-translate'></i>
                 {langue === "fr" ? "EN" : "FR"}
             </button>
         </div>

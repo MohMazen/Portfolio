@@ -1,12 +1,11 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { useTranslation } from './translations';
 import Header from './components/Header/Header';
 import './App.css';
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
 
 // Créer un Context pour le thème
-const ThemeContext = createContext();
+const ThemeContext = createContext(null);
 
 // Hook personnalisé pour utiliser le thème
 export const useTheme = () => {
@@ -92,9 +91,6 @@ function App() {
         }
         return 'fr';
     });
-
-    // Hook pour les traductions
-    const { t } = useTranslation(langue);
 
     // Fonction pour changer la langue
     const changerLangue = () => {

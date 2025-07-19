@@ -9,7 +9,7 @@ const enTranslations = {
 	// Home page texts
 	main: {
 		name: "Mohamed-Mazen Chaabane",
-		description: "Computer science student, passionate about web and mobile development."
+		description: "Computer science student."
 	},
 	// Texts for other pages (examples)
 	about: {

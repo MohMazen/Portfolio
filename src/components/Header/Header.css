@@ -1,97 +1,110 @@
-/* Styles du Header */
-.header-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1rem;
-    gap: 0.5rem;
-    background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Styles des boutons */
-.theme-toggle,
-.language-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border: 1px solid var(--border-color);
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    transition: all 0.3s ease;
-}
-
-.theme-toggle:hover,
-.language-toggle:hover {
-    background-color: var(--button-hover);
-    color: var(--button-text);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Styles pour les icônes */
-.theme-toggle i,
-.language-toggle i {
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover i,
-.language-toggle:hover i {
-    transform: scale(1.1);
-}
-
-/* Styles spécifiques pour le mode sombre */
-[data-theme="dark"] .header-container {
-    background-color: var(--bg-color);
-    border-bottom-color: var(--border-color);
-}
-
-[data-theme="dark"] .theme-toggle,
-[data-theme="dark"] .language-toggle {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border-color: var(--border-color);
-}
-
-[data-theme="dark"] .theme-toggle:hover,
-[data-theme="dark"] .language-toggle:hover {
-    background-color: var(--button-hover);
-    color: var(--button-text);
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-}
-
-/* Animation pour le changement d'icône */
-.theme-toggle i {
-    animation: iconRotate 0.3s ease;
-}
-
-@keyframes iconRotate {
-    0% {
-        transform: rotate(0deg);
+/* Variables CSS */
+    :root {
+        --bg-color: #ffffff;
+        --border-color: #e5e7eb;
+        --button-bg: #f9fafb;
+        --button-text: #374151;
+        --button-hover: #f3f4f6;
     }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
-/* Responsive design */
-@media (max-width: 768px) {
+    [data-theme="dark"] {
+        --bg-color: #1f2937;
+        --button-bg: #374151;
+        --button-text: #f9fafb;
+        --button-hover: #4b5563;
+    }
+
+    /* Styles du Header */
     .header-container {
-        padding: 0.75rem;
-        gap: 0.25rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem;
+        gap: 0.5rem;
+        background-color: var(--bg-color);
+        transition: background-color 0.3s ease;
     }
 
+    /* Styles des boutons */
     .theme-toggle,
     .language-toggle {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        background-color: transparent;
+        color: var(--button-text);
+        border: none;
+        transition: all 0.3s ease;
     }
-}
+
+    .theme-toggle:hover,
+    .language-toggle:hover {
+        background-color: var(--button-hover);
+        color: var(--button-text);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styles pour les icônes */
+    .theme-toggle i,
+    .language-toggle i {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover i,
+    .language-toggle:hover i {
+        transform: scale(1.1);
+    }
+
+    /* Styles spécifiques pour le mode sombre */
+    [data-theme="dark"] .header-container {
+        background-color: var(--bg-color);
+    }
+
+    [data-theme="dark"] .theme-toggle,
+    [data-theme="dark"] .language-toggle {
+        background-color: transparent;
+        color: var(--button-text);
+    }
+
+    [data-theme="dark"] .theme-toggle:hover,
+    [data-theme="dark"] .language-toggle:hover {
+        background-color: var(--button-hover);
+        color: var(--button-text);
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Animation pour le changement d'icône */
+    .theme-toggle i {
+        animation: iconRotate 0.3s ease;
+    }
+
+    @keyframes iconRotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .header-container {
+            padding: 0.75rem;
+            gap: 0.25rem;
+        }
+
+        .theme-toggle,
+        .language-toggle {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+    }

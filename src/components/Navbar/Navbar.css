@@ -1,0 +1,51 @@
+.bi.pe-none {
+    width: 24px;
+    height: 24px;
+}
+
+.d-flex.flex-column.flex-shrink-0 {
+    background-color: var(--navbar-bg-color) !important;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-60%);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Variables CSS pour la navbar */
+:root {
+    --navbar-bg-color: rgba(248, 249, 250, 0.9);
+    --navbar-link-color: #6c757d;
+    --navbar-link-hover: #495057;
+}
+
+[data-theme="dark"] {
+    --navbar-bg-color: rgba(33, 37, 41, 0.9);
+    --navbar-link-color: #adb5bd;
+    --navbar-link-hover: #f8f9fa;
+}
+
+/* Styles pour les liens de navigation */
+.nav-link,
+.nav-link[aria-current="page"] {
+    color: var(--navbar-link-color) !important;
+    transition: all 0.3s ease;
+    background-color: transparent !important;
+}
+
+.nav-link:hover {
+    color: var(--navbar-link-hover) !important;
+    background-color: rgba(108, 117, 125, 0.1) !important;
+    transform: translateX(2px);
+    border-radius: 8px;
+}
+
+.nav-link i {
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover i {
+    transform: scale(1.1);
+}
