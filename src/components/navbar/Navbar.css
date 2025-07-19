@@ -1,0 +1,12 @@
+.bi.pe-none {
+    width: 24px;
+    height: 24px;
+}
+
+.d-flex.flex-column.flex-shrink-0 {
+    background-color: transparent !important;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-60%);
+}
