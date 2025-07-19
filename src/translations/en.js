@@ -1,5 +1,4 @@
-// translations/en.js
-export default {
+const enTranslations = {
 	// Header texts
 	header: {
 		darkMode: "Dark",
@@ -8,14 +7,11 @@ export default {
 	},
 
 	// Home page texts
-	home: {
-		title: "Welcome to our website",
-		description: "This is an example of a multilingual application with dark mode.",
-		button: "Click here",
-		currentLanguage: "Current language: English"
+	main: {
+		name: "Mohamed-Mazen Chaabane",
+		description: "Computer science student, passionate about web and mobile development."
 	},
-
-	// About page texts (examples)
+	// Texts for other pages (examples)
 	about: {
 		title: "About us",
 		description: "We are an innovative company.",
@@ -47,3 +43,5 @@ export default {
 		next: "Next"
 	}
 };
+
+export default enTranslations;

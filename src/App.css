@@ -2,21 +2,11 @@
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
-    --card-bg: #f8f9fa;
-    --border-color: #dee2e6;
-    --button-bg: #ffffff;
-    --button-text: #6c757d;
-    --button-hover: #f8f9fa;
 }
 
 [data-theme="dark"] {
     --bg-color: #1a1a1a;
     --text-color: #ffffff;
-    --card-bg: #2d2d2d;
-    --border-color: #404040;
-    --button-bg: #2d2d2d;
-    --button-text: #ffffff;
-    --button-hover: #404040;
 }
 
 /* Styles globaux */
@@ -39,42 +29,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Styles pour le mode sombre - Bootstrap overrides */
-[data-theme="dark"] .btn-outline-secondary {
-    color: var(--button-text);
-    border-color: var(--border-color);
-    background-color: var(--button-bg);
-}
-
-[data-theme="dark"] .btn-outline-secondary:hover {
-    background-color: var(--button-hover);
-    border-color: var(--border-color);
-    color: var(--button-text);
-}
-
-[data-theme="dark"] .card {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-}
-
-[data-theme="dark"] .form-control {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-    color: var(--text-color);
-}
-
-[data-theme="dark"] .form-control:focus {
-    background-color: var(--card-bg);
-    border-color: var(--border-color);
-    color: var(--text-color);
-    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
-}
-
-[data-theme="dark"] .text-muted {
-    color: #adb5bd !important;
-}
-
 /* Transitions fluides */
 * {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

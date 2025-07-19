@@ -1,25 +1,26 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {useTranslation} from '../../translations';
+import {useTheme} from '../../App';
+import './Main.css';
 
-const translate = {
-	fr: {
-		titre: "Étudiant en Informatique",
-	},
-	en: {
-		titre: "Computer Science Student",
-	},
-	ar: {
-		titre: "طالب في علوم الحاسوب",
-	},
+function Main({langue}) {
+	const {t} = useTranslation(langue);
+
+	return (
+		<div>
+			<p className="text-start">{t('main.nom')}</p>
+		</div>
+	);
 }
 
-class Main extends Component {
-	render() {
-		return (
-			<div>
-				<p className="fs-5 text-center text-uppercase">Mohamed-Mazen Chaabane</p>
-			</div>
-		);
-	}
+function MainWithTheme({langue}) {
+	const {isDarkMode} = useTheme();
+
+	return (
+		<div className={isDarkMode ? 'main dark' : 'main'}>
+			<Main langue={langue} />
+		</div>
+	);
 }
 
-export default Main;
+export default MainWithTheme;
