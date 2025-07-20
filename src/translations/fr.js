@@ -14,9 +14,12 @@ const frTranslations = {
 
   // Textes pour d'autres pages (exemples)
   about: {
-   title: "À propos de nous",
-   description: "Nous sommes une entreprise innovante.",
-   mission: "Notre mission est de créer des solutions exceptionnelles."
+   title: "À propos de moi",
+   desscription: "\n" +
+       "Étudiant en informatique, passionné par le développement, en particulier " +
+       "dans le domaine de l’intelligence artificielle. Ambitieux et curieux, " +
+       "je n’hésite pas à m’informer dans des domaines variés et à oser entreprendre. " +
+       "Je cherche à m’épanouir à l’international et à innover en apportant une contribution à mon domaine professionnel."
   },
 
   contact: {

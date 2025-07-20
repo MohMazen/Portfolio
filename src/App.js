@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
+import About from "./components/About/About";
 
 // Créer un Context pour le thème
 const ThemeContext = createContext(null);
@@ -112,6 +113,7 @@ function App() {
             <div className="container-fluid">
                 <Header langue={langue} changerLangue={changerLangue} />
                 <Main langue={langue} changerLangue={changerLangue}/>
+                <About langue={langue} changerLangue={changerLangue}/>
                 <Navbar />
             </div>
         </div>

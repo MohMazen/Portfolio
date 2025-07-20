@@ -7,7 +7,7 @@ class Navbar extends Component {
     return (
         <div>
           <div
-              className="navbar-container d-flex flex-column flex-shrink-0"
+              className="navbar-container d-flex flex-column flex-shrink-0 rounded-3 bg-body-tertiary"
               style={{ width: '4.5rem' }}
           >
             <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
